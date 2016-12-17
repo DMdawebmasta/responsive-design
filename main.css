@@ -1,0 +1,640 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  font-family: Roboto;
+  font-size: 14px;
+  color: #424242;
+  max-width: 100%;
+}
+
+h1, h2, h3, h4, h5 {
+  margin: 0;
+}
+
+header, nav, footer, section, article, div {
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+
+/*
+ *
+ * Common
+ *
+ */
+
+.news__more {
+  float: right;
+  font-size: 0.6em;
+  color: #333;
+  text-decoration: none;
+}
+
+
+/*
+ *
+ * Header
+ *
+ */
+
+header {
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
+  min-height: 56px;
+  width: 100%;
+  transition: min-height 0.3s;
+}
+
+.header__inner {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.header__logo {
+  height: 72px;
+  margin-right: 0.75em;
+  vertical-align: top;
+  margin-top: 12px;
+}
+
+.header__title {
+  font-weight: 300;
+  font-size: 3em;
+  margin: 0.4em 0.2em;
+  display: inline-block;
+  color: #212121;
+}
+
+
+/*
+ *
+ * Top Level Navigation
+ *
+ */
+
+.nav {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.nav__list {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.nav__item {
+  box-sizing: border-box;
+/*  flex-grow: 0;*/
+  width: 25%;
+/*  flex-grow: 1;*/
+  text-align: center;
+  line-height: 20px;
+  padding: 20px 0 20px 0;
+  text-transform: uppercase;
+}
+
+/*.nav a {
+  text-decoration: none;
+  color: #616161;
+  padding: 1.2em;
+
+}
+
+.nav a:hover {
+  text-decoration: underline;
+  color: #212121;
+}                                  */
+
+
+/*
+ *
+ * Main
+ *
+ */
+
+main {
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/*
+ *
+ * Content
+ *
+ */
+
+
+/*
+ *
+ * Hero
+ *
+ */
+
+.hero {
+/*  float: left;*/
+  width: 100%;
+  position: relative;
+  background-image: url("./images/dog.jpg");
+  background-size: cover;
+  background-color: #123;
+  height: 300px;
+}
+
+.hero article {
+  box-sizing: border-box;
+  background-color: #000;
+  background-color: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  bottom: 0;
+  height: 40%;
+  width: 100%;
+  color: #fff;
+  padding: 0.8em;
+}
+
+
+/*
+ *
+ * Top News
+ *
+ */
+
+.top-news {
+/*  float: right;*/
+  width: 100%;
+  height: 320px;
+  border-bottom: 1px solid #E0E0E0;
+  padding: 1em;
+}
+
+.news__title {
+  font-weight: 300;
+  border-bottom: 1px solid #E0E0E0;
+  line-height: 24px;
+  font-size: 16px;
+}
+
+.top-news__item {
+  border-bottom: 1px solid #E0E0E0;
+  padding: 1em 0;
+  line-height: 19.2px;
+}
+
+.top-news__item:before {
+  content: "» ";
+}
+
+.top-news__item:last-child {
+  border-bottom: none;
+}
+
+.top-news__item a {
+  text-decoration: none;
+  color: #666;
+  padding: 1.5em inherit;
+}
+
+.top-news__item a:hover,
+.top-news__item a:active {
+  text-decoration: underline;
+}
+
+
+/*
+ *
+ * Sport Scores
+ *
+ */
+
+.scores {
+/*  width: 100%;*/
+/*  float: left;*/
+  padding-top: 1em;
+}
+
+.scores__table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.scores__table th,
+.scores__table td {
+  padding: 1em;
+}
+
+.scores__table th {
+  color: #fff;
+  font-weight: 300;
+  background-color: #78909C;
+}
+
+.scores__table tr:nth-child(odd) td {
+  background-color: #fff;
+}
+
+.scores__table tr:nth-child(even) td {
+  background-color: #eceff1;
+}
+
+.scores__table td.winner {
+  font-weight: bold;
+}
+
+.scores__table td:nth-child(3) {
+  text-align: right;
+}
+
+.scores__table td:nth-child(2),
+.scores__table td:nth-child(5),
+.scores__table td:nth-child(6) {
+  text-align: center;
+}
+
+/*
+ *
+ * Weather
+ *
+ */
+
+.weather {
+/*  float: right;
+  width: 100%;*/
+  padding: 1em;
+}
+
+.weather__location {
+  display: block;
+  font-weight: 300;
+  font-size: 1.5em;
+}
+
+.weather__desc {
+  display: block;
+  font-size: 1.2em;
+}
+
+.weather__today {
+  width: 60%;
+  vertical-align: middle;
+}
+
+.weather__today__image {
+  vertical-align: middle
+}
+
+.weather__today__temp {
+  font-size: 3em;
+}
+
+.weather__today__deg {
+  font-size: 2em;
+  display: inline;
+}
+
+.weather__next__item {
+  display: inline-block;
+  width: 20%;
+  text-align: center;
+}
+
+.weather__next__item span {
+  display: block;
+}
+
+.weather__next__image {
+  width: 100%;
+}
+
+
+/*
+ *
+ * Weather
+ *
+ */
+
+.recent-news {
+  clear: both;
+  padding: 1em 0 0 0;
+}
+
+.snippet {
+  clear: both;
+  margin: 24px 0;
+}
+
+.snippet__thumbnail {
+  width: 100px;
+  float: left;
+  margin-right: 1em;
+}
+
+.snippet__title {
+  font-weight: 500;
+}
+
+.snippet__title a {
+  text-decoration: none;
+  color: #666;
+  padding: 1.5em inherit;
+}
+
+.snippet__title a:hover,
+.snippet__title a:active {
+  text-decoration: underline;
+}
+
+
+/*
+ *
+ * Footer
+ *
+ */
+
+footer {
+  border-top: 1px solid #E0E0E0;
+  padding: 1em;
+  width: 100%;
+}
+
+footer li {
+  display: inline-block;
+  margin: 0 1em;
+}
+
+footer a {
+  text-decoration: none;
+  color: #333;
+  padding: 1.2em;
+}
+
+img,
+embed,
+object,
+video {
+  max-width: 100%;
+}
+
+/*project part 2*/
+
+.content {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.header__menu {
+  display: none;
+}
+
+.hero, .top-news, .scores, .weather, .recent-news {
+  order: 10;
+}
+
+
+@media screen and (max-width: 549px) {
+  .hero {
+/*  float: left;*/
+  background-image: url("./images/dog-h_1x.jpg");
+        }
+
+  .odds {
+    display: none;
+  }
+  .date {
+    display: none;
+  }
+  .header__logo {
+    height: 48px;
+    margin-right: 0.5em;
+  }
+
+  .header__title {
+    width: calc(100vw - 70px);
+    margin-left: auto;
+    font-size: 1em;
+    vertical-align: bottom;
+    text-align: center;
+    }
+/*  .nav {
+    z-index: 10;
+    background-color: #fff;
+    width: 300px;
+    position: absolute;
+    -webkit-transform: translate(-300px, 0);
+    transform: translate(-300px, 0);
+    transition: transform 0,3s ease;
+  }*/
+/*  .nav.open {
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+  }*/
+  .nav__item {
+    display: list-item;
+    border-bottom: 1px solid #e0e0e0;
+    width: 25%;
+    text-align: center;
+  }
+  .header__menu {
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    padding: 1em;
+  }
+  .header__menu svg {
+    width: 32px;
+    fill: #e0e0e0;
+  }
+  .hero article {
+  height: 50%;
+  text-align: center;
+  }
+}
+
+/*lololololololol*/
+
+
+
+@media screen and (min-width: 550px) {
+  .header__title {
+    width: 460px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1.6em;
+  }
+  .hero {
+    order: 0;
+    width: 65%;
+    background-image: url("./images/dog-h_1x.jpg");
+  }
+  .hero article {
+  height: 50%;
+  text-align: center;
+  }
+  .weather {
+    order: 1;
+    width: 35%;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  .header__title {
+    width: 612px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 2em;
+  }
+  .hero {
+    width: 55%;
+  }
+.hero article {
+  height: 40%;
+  text-align: center;
+  }
+  .top-news {
+    order: 1;
+    width: 45%;
+  }
+  .scores {
+    order: 2;
+    width: 60%;
+  }
+  .weather {
+    order: 3;
+  }
+}
+
+@media screen and (min-width: 850px) and (max-width: 1200px) {
+  main, .header__inner, .nav, .content {
+    min-width: 850px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  header {
+    width: 720px;
+    margin: auto;
+  }
+  .header__title {
+    width: 612px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 2em;
+  }
+  .hero {
+  background-image: url("./images/dog-h_2x.jpg");
+  }
+  .weather {
+    margin-right: auto;
+    margin-left: auto;
+      }
+  }
+
+@media screen and (min-width: 1201px) {
+  .header {
+    text-align: center;
+    width: 720px;
+    margin: auto;
+  }/*.header__inner {
+    width: 720px;
+  }*/
+  .header__logo {
+    width: 72px;
+    margin: 16px 0 0 16px;
+  }
+  .header__title {
+    width: 612px;
+    font-size: 2em;
+    margin: 22px auto 22px auto;
+/*    margin-left: auto;
+    margin-right: auto;*/
+    text-align: center;
+  }
+  .nav {
+    width: 600px;
+  }
+  .hero {
+    width: 600px;
+    height: 320px;
+/*    align-items: center;
+    align-content: center;*/
+ /*   min-height: inherit;*/
+  /*  align-self: center;*/
+    margin-left: 1px;
+    margin-right: 1px;
+    order: 0;
+  }
+.hero article {
+  box-sizing: border-box;
+  background-color: #000;
+  background-color: rgba(0, 0, 0, 0.4);
+  position: absolute;
+  vertical-align: bottom;
+  bottom: 0;
+  left: 72px;
+  height: 40%;
+  width: 80%;
+  text-align: center;
+  /*margin: 0 auto 0 auto;*/
+}
+  .top-news {
+    width: calc((100vw - 600px - 1.6em)/2);
+    max-width: calc((1700px - 600px - 1.6em)/2);
+    margin-right: auto;
+    margin-left: auto;
+    order: -1;
+  }
+  .weather {
+    width: calc((100vw - 600px - 1.6em)/2);
+    max-width: calc((1700px - 600px - 1.6em)/2);
+    margin-left: auto;
+    margin-right: auto;
+    order: 1;
+  }
+  .recent-news {
+    display: inline-block;
+    width: 600px;/*calc((100vw - 720px - 2em)/2);*/
+/*    max-width: calc((1700px - 720px - 2em)/2);*/
+/*    margin-right: 0;
+    margin-left: 0;*/
+    order: 3;
+    float: left;
+  }
+  .scores {
+    width: calc((100vw - 600px - 1.6em)/2);
+    max-width: calc((1700px - 600px - 1.6em)/2);
+    float: left;/*max-width: 25%;*/
+    order: 2;
+    margin: 3.6em auto 0 auto;
+
+  }
+  .scores__table th,
+  .scores__table td {
+  padding: 0.8em 0.4em 0.8em 0.4em;
+}
+  .empty {
+    width: calc((100vw - 600px - 1.6em)/2);
+    max-width: calc((1700px - 600px - 1.6em)/2);
+    float: right;
+    order: 4;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
